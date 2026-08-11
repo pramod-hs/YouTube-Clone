@@ -1,0 +1,387 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    html {
+    scrollbar-width: thin;
+    }
+
+    body {
+      background-color: #1e1e1e;
+      color: white;
+      height: 200vh;
+      display: flex;
+      
+    }
+
+    /* ========== SIDEBAR ========== */
+    .home {
+      width: 220px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #2a2a2a;
+      position: fixed;
+      left: 0;
+      top: 49px;
+      overflow-y: auto;
+      row-gap: 15px;
+      padding-left: 1vw;
+      padding-right: 1rem;
+      padding-bottom: 6pc;
+      box-sizing: border-box; 
+      scrollbar-width: thin;
+      scroll-behavior: smooth;
+      scrollbar-color: #2a2a2a #2a2a2a; 
+      transition: scrollbar-color 0.3s ease;
+    }
+
+    .home:hover {
+      scrollbar-color: #515151 #1a1a1a; 
+    }
+
+    .p_1 {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        border: 2px solid rgb(70, 71, 72);
+        justify-content: center;
+        color: rgb(107, 163, 253);
+        align-items: center;
+        padding: 1px 2px;
+        border-radius: 50px;
+        width: 97px;
+        margin-left: 20px;
+        
+    }
+
+    .span_1{
+      text-align: left;
+      margin-left: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:14px;
+      font-style: italic;
+    }
+
+    
+        /* Container for each row */
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;            /* Space between icon and text */
+      padding: 8px 12px;    /* Internal spacing for clickable area */
+      border-radius: 10px;  /* Slightly rounded corners on hover */
+      cursor: pointer;      /* Makes mouse turn into a hand pointer */
+    }
+
+    /* Hover effect like YouTube */
+    .sidebar-item:hover {
+      background-color: rgba(0, 0, 0, 0.05); /* Light gray background on hover */
+    }
+
+    /* Icon layout rules */
+    .item-icon {
+      width: 24px;          /* Exact standard size for sidebar icons */
+      height: 24px;
+      flex-shrink: 0;       /* Stops icon from shrinking on small screens */
+    }
+
+    /* Text layout rules */
+    .item-text {
+      margin: 0;            /* Removes default spacing around paragraphs */
+      font-size: 14px;      /* Standard readable sidebar text size */
+    }
+
+    /* Title text configuration */
+    .section-title {
+      margin: 12px 12px 6px 12px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* Styling for line breaks */
+    hr {
+      border: 0;
+      border-top: 1px solid #e5e5e5; /* Clean, subtle gray line */
+      margin: 12px 0;
+    }
+
+    .span_2 {
+      color: gray;
+      text-decoration:solid;
+      font-size: 13px;
+      padding-left: 5px;
+    }
+
+
+    /* ========== HEADER ========== */
+    .head {
+      position: fixed;
+      top: 0;
+      left: 0px;
+      right: 0;
+      height: 48px;
+      background: rgba(67, 0, 0, 0.9);
+      display: flex;
+      flex-direction: column;
+      padding: 5px 10px;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    .up_head {
+      display: grid;
+      align-items: center;
+      grid-auto-flow: row;
+      grid-template-columns: 180px 400px 180px ;
+      grid-template-rows: 40px;
+      justify-content: space-between;
+    }
+
+    /* Logo */
+    .image_head {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      gap: 5px;
+      
+    }
+
+    /* image section */
+
+    .image_head_1 {
+      height: 30px;
+    }
+    .image_head_2 {
+        height: 20px;
+    }
+    .image_head_3 {
+        height: 20px;
+        /* width: 33px; */
+    }
+
+    .p_head_1 {
+      font-size: 18px;
+      margin-top: 2px;
+      text-align:justify;
+      font-family:fantasy;
+    }
+
+    sup {
+      font-size: 10px;
+      color: #ccc;
+    }
+
+    /* Search */
+    .search_box_head {
+      display:grid ;
+      grid-auto-flow: row;
+      grid-template-columns: 10fr 60px 55px ;
+      align-items: center;
+    }
+
+    .text {
+      height: 36px;
+      max-width: 30rem;
+      min-width: 20rem;
+      padding: 0 10px;
+      border: 2px solid #555;
+      border-radius: 20px 0 0 20px;
+      outline: none;
+      background: #2b2b2b;
+      color: white;
+    }
+
+    .button_1 {
+      height: 36px;
+      width: 40px;
+      border: none;
+      background: #444;
+      border-radius: 0 20px 20px 0;
+      cursor: pointer;
+      padding: 8px;
+    }
+    
+    .button_2 {
+        padding: 5px;
+        background-color: gray;
+        outline: none;
+        border-radius: 50px;
+        margin-left: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* last section of the head */
+
+    .sign-in {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    .p_head_2 {
+        background-color: gray;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        padding: 2px 6px ;
+
+    }
+    .p_head_3 P {
+        color: rgb(52, 128, 251);
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight:300;
+        font-size: medium;
+    }
+
+    .p_head_3 {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        border: 2px solid rgb(70, 71, 72);
+        justify-content: center;
+        align-items: center;
+        padding: 2px 4px;
+        border-radius: 50px;
+        padding-right: 6px;
+    }
+     
+    /* head down side  */
+
+    .down_head {
+      background-color: rgb(73, 146, 209 ,0.7);
+      position: fixed;
+      margin: 0;
+      top: 50px;
+      left: 220px;
+      height:44px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      overflow-x:none;
+      padding: 6px 10px;
+    }
+    .button_head_1 {
+      background-color: gray;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      min-height: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+      margin-right: 10px;
+      
+    }
+
+    #All {
+      background-color: white;
+      color: black;
+    }
+
+    /* ========== CONTENT ========== */
+    .video-grid{
+
+        display:grid;
+        grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+        gap:24px;
+        max-width:1600px;
+        margin:auto;
+    }
+
+    /* Video Card */
+    .video-card{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+        cursor:pointer;
+        transition:transform .2s ease;
+    }
+
+
+    /* Thumbnail */
+    .thumbnail-container{
+        position:relative;
+        width:100%;
+        aspect-ratio:16/9;
+        overflow:hidden;
+        border-radius:14px;
+    }
+
+    .thumbnail-img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        transition:transform .3s ease;
+    }
+
+
+
+    /* Duration Badge */
+    .video-time{
+        position:absolute;
+        bottom:8px;
+        right:8px;
+        background:rgba(0,0,0,.85);
+        padding:4px 7px;
+        border-radius:4px;
+        font-size:12px;
+        font-weight:600;
+    }
+
+    /* Details Section */
+    .video-details{
+        display:flex;
+        gap:12px;
+    }
+
+    .channel-avatar{
+        width:40px;
+        height:40px;
+        border-radius:50%;
+        overflow:hidden;
+        flex-shrink:0;
+    }
+
+    .channel-avatar img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    .video-info{
+        flex:1;
+        min-width:0;
+    }
+
+    .video-title{
+        font-size:16px;
+        font-weight:500;
+        line-height:1.4;
+        margin-bottom:6px;
+
+        display:-webkit-box;
+        -webkit-line-clamp:2;
+        -webkit-box-orient:vertical;
+        overflow:hidden;
+    }
+
+    .channel-name{
+        color:#aaa;
+        font-size:14px;
+        margin-bottom:2px;
+    }
+
+    .video-metadata{
+        color:#aaa;
+        font-size:13px;
+        display:flex;
+        align-items:center;
+        gap:5px;
+    }
+
+    .meta-dot{
+        font-size:10px;
+    }
